@@ -1,0 +1,45 @@
+@use './control' as control;
+
+
+@mixin button {
+    @include control.control;
+
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    user-select: none;
+}
+
+@mixin button-primary {
+    color: white;
+    border-color: dodgerblue;
+    background-color: dodgerblue;
+
+    &:hover {
+        border-color: darken(dodgerblue, 5);
+        background-color: darken(dodgerblue, 5);
+    }
+
+    &:active {
+        border-color: darken(dodgerblue, 10);
+        background-color: darken(dodgerblue, 10);
+    }
+}
+
+
+@mixin button-block {
+    display: block;
+    width: 100%;
+}
+
+.button {
+    @include button;
+
+    &.-primary {
+        @include button-primary;
+    }
+
+    &.-block {
+        @include button-block;
+    }
+}

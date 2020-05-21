@@ -1,0 +1,19 @@
+@use './control' as control;
+
+@mixin input {
+    @include control.control;
+
+    background-color: white;
+    display: block;
+    width: 100%;
+
+    &:focus {
+        border-color: dodgerblue;
+    }
+}
+
+
+
+.input {
+    @include input;
+}

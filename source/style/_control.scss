@@ -1,0 +1,26 @@
+@mixin control {
+    font: {
+        size: 0.9rem;
+        family: sans-serif;
+    }
+
+    border: {
+        width: 1px;
+        style: solid;
+        color: transparent;
+        radius: 0.25rem;
+    }
+
+    padding: 0.8em 1.3em;
+
+    line-height: inherit;
+    vertical-align: middle;
+    outline: none;
+
+    -webkit-appearance: none;
+    box-sizing: border-box;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}

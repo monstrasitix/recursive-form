@@ -1,0 +1,48 @@
+@forward './button';
+@forward './input';
+
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    width: 90%;
+    max-width: 300px;
+    margin: 3rem auto;
+}
+
+
+.field {
+    margin: 1rem 0;
+
+    &.-flex {
+        display: flex;
+        > * + * {
+            margin-left: 1em;
+        }
+    }
+}
+
+.label {
+    margin: 0.7rem 0;
+    display: block;
+    color: gray;
+
+    font: {
+        size: 0.9rem;
+        family: sans-serif;
+    }
+}
+
+.message {
+    margin: 0.7rem 0;
+    display: block;
+    color: crimson;
+    text-align: right;
+
+    font: {
+        size: 0.9rem;
+        family: sans-serif;
+    }
+}
